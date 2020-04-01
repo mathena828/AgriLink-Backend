@@ -9,4 +9,4 @@ class SupplierSerializer(serializers.ModelSerializer):
 class SupplySerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Supply
-		fields = ('id','supplier','name','address','quantity','price','description','is_validated')
+		fields = ('id','supplier','name','address','region','quantity','unit','price','description','is_validated')
