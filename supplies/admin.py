@@ -3,11 +3,16 @@ from .models import Supplier, Supply
 
 # Register your models here.
 
-class SupplierAdmin(admin.ModelAdmin): 
-      list_display = ('organization', 'first_name', 'last_name','mobile','email')
+
+class SupplierAdmin(admin.ModelAdmin):
+    list_display = ('organization', 'first_name', 'last_name',
+                    'mobile', 'email', 'is_verified')
+
 
 class SuppyAdmin(admin.ModelAdmin):
-      list_display = ('supplier', 'name', 'address','quantity','price','is_validated')
+    list_display = ('supplier', 'name', 'address',
+                    'quantity', 'price')
 
-admin.site.register(Supplier,SupplierAdmin)
-admin.site.register(Supply,SuppyAdmin)
+
+admin.site.register(Supplier, SupplierAdmin)
+admin.site.register(Supply, SuppyAdmin)
