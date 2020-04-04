@@ -5,7 +5,8 @@ from django.db import models
 
 class Supplier(models.Model):
 	organization = models.CharField(max_length=128)
-	name = models.CharField(max_length=128)
+	first_name = models.CharField(max_length=128)
+	last_name = models.CharField(max_length=128)
 	mobile = models.CharField(max_length=11)
 	email = models.EmailField(blank=True)
 
